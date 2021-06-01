@@ -1,11 +1,20 @@
-# redux-boilerplate
+# Le Wagon Citites - REACT & REDUX
 
-Simple React + Redux starter with the following config:
+## Overview
+Simple webpage using the following configuration:
 
-- React, ReactDOM
-- Redux, React-Redux
-- Webpack 3
-- Babel with es2015 and react presets
-- Bootstrap (css only, loaded from a cdn in `index.html`)
-- work with `.js` or `.jsx` files
-- main `application.scss` stylesheet is imported in `index.js` as a module to enjoy hot reloading
+React, ReactDOM
+Redux
+Webpack
+HTML
+Bootstrap (css only, loaded from a cdn in index.html)
+
+
+## Features
+
+- Render list of cities
+- Click on a city and show the city information
+
+## Screenshot
+
+![Screenshot](https://res.cloudinary.com/xiway/image/upload/v1622552475/Capture_d_e%CC%81cran_2021-06-01_a%CC%80_21.00.25_a6bl2j.png)
