@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CityList from '../containers/city_list.jsx';
-
+import City from '../containers/city.jsx';
 // TODO: remove this line and use Redux
 const cities = [
   { name: 'Paris', address: '16 Villa Gaudelet, 75011 Paris', slug: 'paris' },
@@ -12,6 +12,8 @@ const App = () => {
   return (
     <div className="app">
       <CityList cities={cities} />
+      <div className="active-city">
+      </div>
     </div>
   );
 };
