@@ -1,25 +1,23 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-class ActiveCity extends Component {
-  render(){
-    if (this.props.activeCity){
-      const style = { backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://kitt.lewagon.com/placeholder/cities/'${this.props.activeCity.city.slug}')`
-      }
-    return (
-      <div className="active-city" style={style}>
-        <h3>{this.props.activeCity.city.name}</h3>
-        <p>{this.props.activeCity.city.address}</p>
-      </div>
-    )
+const ActiveCity = (props) => {
+  if (props.activeCity) {
+    const style = { backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/${props.activeCity.slug}')`}
+      return (
+        <div className="active-city" style={style}>
+          <h3>{props.activeCity.name}</h3>
+          <p>{props.activeCity.address}</p>
+        </div>
+      )
   } else {
-    return
-      <div className="active-city" style={style}>
-        <h3>No city</h3>
-        <p>No address</p>
+    return (
+      <div className="active-city">
+        <h3>No city selected 🥺</h3>
+        <p>No address to show off</p>
       </div>
-    }
-  };
+      );
+    };
 }
 
 function mapStateToProps(state) {
